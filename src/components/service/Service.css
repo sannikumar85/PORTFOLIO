@@ -1,0 +1,245 @@
+
+
+
+
+.para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.para::after {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 4px; /* Thickness of the line */
+    background: rgb(17, 24, 48); /* Line color */
+    top: 100%; /* Middle of the text */
+}
+
+
+.para h1 span {
+    color: orange;
+}
+
+.top {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.box {
+    height: 250px;
+    width: 3000px;
+background-color: rgba(23, 191, 194, 0.409);
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}
+
+.box {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeIn 5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.box1 .logo1 {
+
+    margin: 12px;
+    padding: 12px;
+    color: rgb(235, 7, 189);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.tag1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tag1 h1 {
+    color: rgb(201, 10, 86);
+}
+
+.tag1 p {
+    color: rgb(14, 1, 2);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+.logo2 {
+
+    margin: 12px;
+    padding: 12px;
+    color: rgb(200, 4, 230);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.tag2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tag2 p {
+    color: rgb(14, 1, 2);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+.tag2 h1 {
+    color: rgb(6, 27, 209);
+}
+
+
+.logo3 {
+    margin: 12px;
+    padding: 12px;
+    color: rgba(22, 11, 216, 0.998);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tag3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tag3 p {
+    color: rgb(20, 5, 6);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+.tag3 h1 {
+    color: rgb(188, 18, 165);
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    color: #fffbfb;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .btn::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .btn:hover::before {
+    opacity: 1;
+  }
+  
+  .btn:active:after {
+    background: transparent;
+  }
+  
+  .btn:active {
+    color: #060000;
+    font-weight: bold;
+  }
+
+  @media (max-width: 1000px) {
+    .top {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .box {
+        width: 90%; 
+        max-width: 500px; 
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .logo1, .logo2, .logo3 {
+        font-size: 24px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .tag1, .tag2, .tag3 {
+        text-align: center; 
+    }
+
+    .tag1 p, .tag2 p, .tag3 p {
+        margin-left: 0; 
+        font-size: 14px;
+    }
+}
+
+  

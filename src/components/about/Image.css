@@ -1,0 +1,68 @@
+.container {
+   
+    width: 100%;
+    height: 400px;
+    /* Set as per your requirement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-left: 200px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+
+.slider {
+    width: 150px;
+    height: 200px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: autoRun 20s linear infinite;
+    position: absolute;
+}
+
+@keyframes autoRun {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.slider .item {
+    position: absolute;
+    inset: 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / 10) * 1deg)) translateZ(300px);
+}
+
+.slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .slider {
+        width: 100px;
+        height: 120px;
+    }
+
+    .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / 10) * 1deg)) translateZ(200px);
+    }
+}

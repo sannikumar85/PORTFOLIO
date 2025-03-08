@@ -1,0 +1,55 @@
+.para{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para h1 span{
+    color: orange;
+}
+.project{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    gap: 20px;
+}
+.box-3{
+    animation: fadeIn 0.8s ease-out forwards;
+  
+    
+}
+.box-3 img{
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    height: 300px;
+    width: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.box-3 img:hover{
+    box-shadow: 2px 2px 10px black;
+
+}
+@media (max-width: 1000px) {
+   .project{
+    flex-wrap: wrap;
+    flex-direction: column;
+   }
+   .project .box-3 img{
+    right: auto;
+    left: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+   }
+   .project .box-3 img:hover{
+    opacity: 90%;
+    cursor: pointer;
+   }
+}

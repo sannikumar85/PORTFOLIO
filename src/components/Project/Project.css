@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(23, 194, 194);
+}
+
+h1{ 
+    color: white;
+    gap: 6px;
+    margin-top: 20px;
+     animation: fadeIn 2s ease-in-out, bounce 1.5s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 span{
+    color: orange;
+}
+hr{
+    width: 160px;
+    height: 4px;
+    background-color: red;
+    margin-left: 45%;
+
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-10px);
+    }
+  }
+
+  .para{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para h1 span{
+    color: orange;
+}
+.project{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   flex-wrap: wrap;
+    gap: 20px;
+}
+.box-3{
+    animation: fadeIn 0.8s ease-out forwards;
+  
+    
+}
+.box-3 img{
+    padding: 20px;
+    border-radius: 30px;
+    height: 300px;
+    width: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.box-3 img:hover{
+    opacity: 80%;
+    box-shadow: 2px 2px 10px black;
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1000px) {
+    .project {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .box-3 {
+        width: 90%; 
+        max-width: 500px; 
+        height: auto; 
+        padding: 0px; 
+    }
+    .box-3 img{
+        
+        padding: 0;
+        margin-left: 0;
+
+    }
+
+
+    
+   
+}
+
+
