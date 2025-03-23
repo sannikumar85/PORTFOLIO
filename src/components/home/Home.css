@@ -1,3 +1,4 @@
+
 .main {
   margin: 0;
   display: flex;
@@ -23,7 +24,7 @@
   line-height: 22px;
   font-size: 25px;
   margin-top: 10px;
-  color: #901515;
+  color: #d0c8c8;
   font-weight: bold;
 }
 .main-text button{
@@ -135,11 +136,10 @@
 
 @media (max-width:1000px) {
   .main{
+    
     flex-direction: column;
   }
-  .main-text{
-margin-top: 150px;
-  }
+  
   .main-text p{
     display: none;
   }

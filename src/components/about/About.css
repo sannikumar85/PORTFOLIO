@@ -87,20 +87,21 @@ hr {
 }
 
 .main-right h2 {
-  color: rgb(235, 239, 0);
+  color: rgb(237, 5, 5);
   font-size: 40px;
   font-weight: bolder;
 }
 
 #pi {
   margin-top: 20px;
+  font-size: 20px;
   color: rgb(14, 6, 2);
   font-weight: bold;
 }
 
 .main-right p {
   font-size: 1.2rem;
-  color: rgb(197, 12, 12);
+  color: rgb(19, 19, 1);
   font-style: italic;
   margin-top: 30px;
   outline: 3cqi;
@@ -108,13 +109,14 @@ hr {
 .so{
   position: relative;
   margin-top: 50px;
+  
 }
-.h3 {
+/* .h3 {
   
   margin-top: 50px;
 
 
-}
+} */
 
 .h3 h3 {
   color: white;
@@ -378,7 +380,9 @@ width: 300px;
   flex-direction: row-reverse; /* Flip image & text */
 }
 @media (max-width: 1000px) {
-  
+  .about{
+    margin-top: 300px;
+  }
   
   .main-left img {
     height: 250px;
@@ -433,6 +437,7 @@ width: 300px;
   }
 
   .basic {
+   
     width: 90%;
     flex-direction: column;
     height: 500px;
@@ -460,3 +465,4 @@ width: 300px;
     margin-left: 0;
   }
 }
+

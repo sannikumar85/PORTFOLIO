@@ -39,6 +39,9 @@ const bot = () => {
                     </div>
 
                 </div>
+                <div className="hh">
+                   
+                </div>
               
                 <div className="copy">
                     <p><FaCopyright /> Copyright ALL Rights Reserved 2024</p>

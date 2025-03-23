@@ -154,11 +154,11 @@ label {
     flex-direction: column; /* Ensure items stack */
     align-items: center; /* Center the forms */
     justify-content: center;
-    background-color: red;
+   
 }
 .form1 {
     width: 100%; /* Full width */
-    background-color: green;
+    
     display: flex;
     justify-content: center;
 }

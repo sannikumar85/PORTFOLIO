@@ -1,92 +1,100 @@
-html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 nav {
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.792);
-    position: relative;
-    height: 85px;
+    background:  rgb(30, 114, 114)  ;
+    height: 95px;
     width: 100vw;
-
-    /* box-shadow: 2px 2px 10px black; */
-
-}
-
-.logo img {
-    margin-top: 25px;
-    height: 180px;
-    width: 180px;
-}
-
-nav ul {
+box-shadow: 2px 2px 20px rgb(6, 75, 70);
+  }
+  
+  /* Remove Text Decoration */
+  nav a {
+    text-decoration: none;
+  }
+  
+  /* Logo Style */
+  .logo img {
+   
+    height: 95px;
+    width: 95px;
+    border-radius: 50%
+    
+  }
+  .logo img:hover{
+    box-shadow: 2px 2px 10px black;
+  }
+  
+ 
+  /* Navigation Links */
+  nav ul {
     display: flex;
     gap: 30px;
     align-items: center;
-}
+  }
+  
+  
 
-
-
-nav ul li {
-    font-size: 1.2rem;
-    text-decoration: none;
+   nav ul li {
+    font-size: 1.1rem;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
     list-style: none;
-    font-style: normal;
-}
-
-nav ul li:hover {
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Animation */
+  nav ul li:hover {
     color: red;
-    font-size: 1.2rem;
-}
-
-
-.menu-icon {
+    transform: translateY(-5px); /* Move text up slightly */
+  }
+  
+  /* Add an Underline Effect on Hover */
+  nav ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li:hover::after {
+    width: 100%; /* Full underline on hover */
+  }
+  
+  /* Menu Icon */
+  .menu-icon {
     display: none;
-}
-
-.menu-icon i {
     color: white;
     font-size: 30px;
-}
-
-@media (max-width:1000px) {
-    nav {
-        width: 100%;
-    }
-
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 1000px) {
     nav ul {
-        position: absolute;
-        top: 85px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.792);
-        gap: 0;
-        overflow: hidden;
+      position: absolute;
+      top: 85px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background:  rgba(26, 48, 54, 0.811);
+      max-height: 0;
+      overflow: hidden;
     }
-
+  
     nav ul li {
-        padding: 20px;
-        padding-top: 0;
+      padding: 20px;
     }
-
+  
     .menu-icon {
-        display: block;
+      display: block;
     }
-
+  
     #menuList {
-        transition: all 0.5s;
+      transition: max-height 0.5s ease;
     }
-}
+  }

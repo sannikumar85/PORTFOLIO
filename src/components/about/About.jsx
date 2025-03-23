@@ -52,13 +52,13 @@ const About = () => {
             <h3><span>Phone:</span>+91 8579037260</h3>
             <h3><span>Email:</span>sannikumargupta43@gmail.com</h3>
             <h3><span>Address:</span>Muzaffarpur, Bihar, India</h3>
-            <button><a href="" download> RESUME <FaDownload /></a></button>
+            <button><a href="https://drive.google.com/file/d/1JJhZf4gy3hqgKWs_6X5lmLZsh3AN-VvW/view?usp=sharing" download> RESUME <FaDownload /></a></button>
           </div>
 
         </div>
       </div>
 
-      <h1 className='so'>My Skill</h1>
+      <h1 className='so'>My <span>Skill</span> </h1> <hr />
       
       
       <div className="skill">
@@ -115,8 +115,8 @@ const About = () => {
       </div>
 
       <div className="marks">
-        <div className="basic left">
-          <div className="bas-img">
+        <div className="basic left btn">
+          <div className="bas-img ">
             <img src={maa} alt="" />
           </div>
           <div className="bas-p">
@@ -134,7 +134,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="basic left ">
+        <div className="basic left btn ">
           <div className="bas-img">
             <img src={twelve} alt="" />
           </div>
